@@ -22,7 +22,7 @@ concurrency:
 jobs:
   unit-tests-legacy:
     name: Unit Tests (legacy)
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
 
   unit-tests-cmocka:
     name: Unit Tests (cmocka)
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
